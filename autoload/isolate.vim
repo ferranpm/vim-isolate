@@ -1,3 +1,11 @@
+function! Isolation() range
+    if exists('b:isolate')
+        call isolate#UnIsolate()
+    else
+        execute a:firstline.','.a:lastline .'call isolate#Isolate()'
+    endif
+endfunction
+
 function! isolate#Isolate() range
     let ft = &filetype
     let lines = getline(a:firstline, a:lastline)

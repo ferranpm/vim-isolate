@@ -12,10 +12,8 @@ call `:[range]Isolation` to edit part of a file on a new buffer. When finished,
 call `:Isolation` to merge the edited part with the file
 Recommended mapping
 
-    if exists(':Isolatation')
-        nnoremap <leader>i vap \| :Isolation<cr>
-        vnoremap <leader>i :Isolation<cr>
-    endif
+    nnoremap <leader>i vap \| :Isolation<cr>
+    vnoremap <leader>i :Isolation<cr>
 
 ## Demo
 Not Updated to show toggling or explicit ranges (`:n,N Isolation`)
